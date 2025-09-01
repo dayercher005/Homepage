@@ -1,0 +1,21 @@
+:root{
+    --RobotoFont: Roboto;
+    --PlayfairDisplay: Playfair Display;
+}
+
+body{
+    background-image: url("../assets/Background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.BridgeStyle{
+    width: 30%;
+    height: 30%;
+}
+
+.nameText{
+    font-family: var(--PlayfairDisplay);
+}
