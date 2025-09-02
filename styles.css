@@ -1,6 +1,11 @@
 :root{
     --RobotoFont: Roboto;
     --PlayfairDisplay: Playfair Display;
+    --white: hsl(0, 0%, 96%);
+}
+
+*{
+    font-family: Roboto;
 }
 
 body{
@@ -11,11 +16,22 @@ body{
     height: 100vh;
 }
 
-.BridgeStyle{
-    width: 30%;
-    height: 30%;
-}
 
 .nameText{
     font-family: var(--PlayfairDisplay);
+}
+
+div.Header{
+    display: flex;
+}
+
+
+div.aboutSection{
+    background-color: var(--white);
+}
+
+
+h1.About{
+    font-family: PlayfairDisplay;
+    font-weight: 300;
 }
