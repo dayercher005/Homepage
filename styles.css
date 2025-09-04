@@ -10,20 +10,25 @@
     --backgroundColor4: hsl(301, 39%, 52%);
     --backgroundColor5: hsl(31, 78%, 56%);
     --backgroundColor6: hsl(193, 60%, 60%);
-    --boxShadow: hsl(0, 1%, 52%);
+    --boxShadow: hsl(0, 2%, 45%);
     --descriptionColor: hsl(0, 9%, 36%);
+    --wallpaperColor: hsl(217, 29%, 36%);
+    --wallpaperColor2: hsl(0, 0%, 100%);
+    --footerFontSize: 2.5rem;
 }
 
 *{
     font-family: Roboto;
     box-sizing: border-box;
+    margin: 0;
 }
 
-body{
-    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(162, 87%, 56%));
-}
 
 /* CSS Styling for Header */
+
+img.profileImage{
+    margin-top: 2.5%;
+}
 
 p.nameText{
     font-family: var(--PlayfairDisplay);
@@ -38,6 +43,8 @@ header.Header{
     position: relative;
     display: flex;
     justify-content: center;
+    background: linear-gradient(to bottom right, var(--wallpaperColor) 50%, var(--wallpaperColor2) 50%);
+    margin: 0;
 }
 
 
@@ -46,20 +53,26 @@ div.aboutSection{
     flex-direction: column;
     background-color: var(--white);
     padding: 1.5%;
-    width: 55%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    width: 45%;
+    margin-top: 3.5%;
+    margin-bottom: 3.5%;
+    max-width: 850px;
 }
 
 
 h1.About{
     font-family: PlayfairDisplay;
     font-weight: 300;
+    color: var(--descriptionColor);
+    font-size: 2.7rem;
 }
 
 
 p.dummyText{
-    line-height: 1.6;
+    padding-top: 7%;
+    font-family: 2rem;
+    line-height: 1.8;
+    color: var(--descriptionColor);
 }
 
 div.iconContainer{
@@ -75,35 +88,40 @@ div.iconContainer{
 
 
 h2.mainHeaderText{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
     font-family: Playfair Display;
     font-weight: 400;
     font-size: 2rem;
+    grid-column: 1/4;
+    grid-row: 1/1
 }
 
 
 section.mainBody{
     display: flex;
     flex-direction: column;
-    padding: 3%;
+    justify-items: center;
+    padding-left: auto;
+    margin: 0;
+    background: linear-gradient(to bottom right, var(--wallpaperColor2) 50%, var(--wallpaperColor) 50%);
 }
 
 div.projectGridContainer{
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
     gap: 5%;
+    max-width: 1500px;
+    margin: auto;
+    padding-bottom: 2%;
 }
 
 div.projectContainer{
     display: flex;
     box-shadow: 20px 15px 30px var(--boxShadow);
-    transform: translateY(-10px);
-    overflow: hidden;
 }
 
-div.projectContainer:hover{
-    transition: transform 2s;
-}
 
 div.screenshot{
     text-align: center;
@@ -116,26 +134,38 @@ div.screenshot{
 
 div#project1{
     background-color : var(--backgroundColor1);
+    grid-column: 2/2;
+    grid-row: 1/1;
 }
 
 div#project2{
     background-color : var(--backgroundColor2);
+    grid-column: 2/2;
+    grid-row: 2/2;
 }
 
 div#project3{
     background-color : var(--backgroundColor3);
+    grid-column: 2/2;
+    grid-row: 3/3;
 }
 
 div#project4{
     background-color : var(--backgroundColor4);
+    grid-column: 3/3;
+    grid-row: 1/1;
 }
 
 div#project5{
     background-color : var(--backgroundColor5);
+    grid-column: 3/3;
+    grid-row: 2/2;
 }
 
 div#project6{
     background-color : var(--backgroundColor6);
+    grid-column: 3/3;
+    grid-row: 3/3;
 }
 
 
@@ -160,21 +190,101 @@ p.projectDescription{
 }
 
 
+h3.contactText{
+    font-family: var(--PlayfairDisplay);
+    font-size: 2.5rem;
+    color: var(--descriptionColor);
+}
+
+div.iconFooterContainer{
+    display: flex;
+    gap: 1.6rem;
+}
+
+div.ImportantDetails{
+    margin-left: 3%;
+}
+
+div.contactIconContainer{
+    display: flex;
+    align-items: center;
+}
+
+div.mailIconContainer{
+    display: flex;
+    align-items: center;
+    margin: 1%;
+}
+
+
+/* CSS Styling for Tablets (viewport within 1000px) */
 
 @media (max-width: 1000px){
 
+    h2.mainHeaderText{
+        grid-column: 1/3;
+        grid-row: 1/1
+    }
+
     div.projectGridContainer{
         display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: repeat(2, 1fr);
+        grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+        gap: 5%;
+        margin: 2%;
+        margin: auto;
+    }
+
+    div#project1{
+        background-color : var(--backgroundColor1);
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    div#project2{
+        background-color : var(--backgroundColor2);
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+
+    div#project3{
+        background-color : var(--backgroundColor3);
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+
+    div#project4{
+        background-color : var(--backgroundColor4);
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+
+    div#project5{
+        background-color : var(--backgroundColor5);
+        grid-column: 4/5;
+        grid-row: 2/3;
+    }
+
+    div#project6{
+        background-color : var(--backgroundColor6);
+        grid-column: 4/5;
+        grid-row: 3/4;
     }
 
 }
 
-@media (max-width: 600px) {
+
+
+/* CSS Styling for Mobile Devices (viewport within 500px) */
+
+
+@media (max-width: 500px) {
 
     img{
         max-width: 40%
+    }
+
+    *{
+        overflow: scroll
     }
 
     header.Header{
@@ -195,9 +305,9 @@ p.projectDescription{
     }
 
     div.projectGridContainer{
-        display: grid;
-        grid-template-rows: repeat(1, 1fr);
-        grid-template-columns: repeat(1, 1fr);
+        display: flex;
+        flex-direction: column;
     }
+
 }
 
