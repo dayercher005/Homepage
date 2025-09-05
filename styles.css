@@ -22,24 +22,35 @@
     box-sizing: border-box;
 }
 
+body{
+    margin: 0;
+}
+
 
 /* CSS Styling for Header */
+
+figure.pictureSection{
+    position: relative;
+    margin: 2% 0;
+}
+
 
 img.profileImage{
     margin-top: 2.5%;
 }
 
-p.nameText{
-    font-family: var(--PlayfairDisplay);
+figcaption.nameText{
     position: absolute;
+    top: 90%;
+    left: 15%;
+    font-family: var(--PlayfairDisplay);
     color: var(--white);
     font-size: 3rem;
-    top: 85%;
-    transform: translate(20%);
+    margin: 0;
 }
 
 header.Header{
-    position: relative;
+    max-height: 700px; 
     display: flex;
     justify-content: center;
     background: linear-gradient(to bottom right, var(--wallpaperColor) 50%, var(--wallpaperColor2) 50%);
@@ -52,9 +63,10 @@ div.aboutSection{
     background-color: var(--white);
     padding: 1.5%;
     width: 45%;
-    margin-top: 3.5%;
-    margin-bottom: 3.5%;
-    max-width: 850px;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    max-width: 800px;
+    min-height: 525px;
 }
 
 
@@ -62,12 +74,12 @@ h1.About{
     font-family: PlayfairDisplay;
     font-weight: 300;
     color: var(--descriptionColor);
-    font-size: 2.7rem;
+    font-size: 2.5rem;
 }
 
 
 p.dummyText{
-    padding-top: 7%;
+    padding-top: 5%;
     font-family: 2rem;
     line-height: 1.8;
     color: var(--descriptionColor);
@@ -103,7 +115,6 @@ section.mainBody{
     flex-direction: column;
     justify-items: center;
     padding-left: auto;
-    background: linear-gradient(to bottom right, var(--wallpaperColor2) 50%, var(--wallpaperColor) 50%);
 }
 
 div.projectGridContainer{
@@ -118,6 +129,11 @@ div.projectGridContainer{
 div.projectContainer{
     display: flex;
     box-shadow: 20px 15px 30px var(--boxShadow);
+}
+
+div.projectContainer:hover{
+    transform: translateY(-10px);
+    transition: transform 0.3s;
 }
 
 
@@ -193,12 +209,14 @@ footer{
     display: flex;
     justify-content: center;
     padding: 2%;
+    background-color: var(--wallpaperColor);
+    margin: 0;
 }
 
 h3.contactText{
     font-family: var(--PlayfairDisplay);
     font-size: 2.5rem;
-    color: var(--descriptionColor);
+    color: var(--white);
 }
 
 div.iconFooterContainer{
@@ -208,22 +226,27 @@ div.iconFooterContainer{
 
 div.ImportantDetails{
     padding: 0 3%;
+    color: var(--white);
 }
 
 div.contactIconContainer{
     display: flex;
     align-items: center;
+    gap: 3%;
 }
 
 div.mailIconContainer{
     display: flex;
     align-items: center;
+    gap: 3%;
 }
+
 
 
 /* CSS Styling for Tablets (viewport within 1000px) */
 
 @media (max-width: 1000px){
+
 
     h2.mainHeaderText{
         grid-column: 1/3;
@@ -234,13 +257,10 @@ div.mailIconContainer{
     div.projectGridContainer{
         display: grid;
         grid-template: 1fr repeat(3, 2fr) / repeat(2, 2fr);
-        gap: 5%;
-        margin: 2.5%;
+        gap: 3%;
+        margin: 4%;
     }
 
-    div.projectContainer{
-        margin: 0 3%;
-    }
 
     div#project1{
         background-color : var(--backgroundColor1);
@@ -276,6 +296,19 @@ div.mailIconContainer{
         background-color : var(--backgroundColor6);
         grid-column: 4/5;
         grid-row: 3/4;
+    }
+
+    div.ImportantDetails{
+        padding: 5%;
+    }
+
+    img.footerImage{
+        width: 40%;
+        height: 25%;
+    }
+
+    footer{
+        align-items: center;
     }
 
 }
