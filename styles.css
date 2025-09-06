@@ -140,7 +140,7 @@ div.projectContainer:hover{
 div.screenshot{
     text-align: center;
     font-family: var(--PlayfairDisplay);
-    padding: 30%;
+    padding: 23%;
     font-size: 2rem;
     color: var(--white);
 }
@@ -247,6 +247,60 @@ div.mailIconContainer{
 
 @media (max-width: 1000px){
 
+    div.aboutSection{
+        display: block;
+        margin: 0;
+        width: 90%;
+    }
+
+    header.Header{
+        position: relative;
+        display: inline-block;
+        padding: 13%;
+    }
+
+    img.profileImage{
+        display: block;
+        height: 400px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    figure.pictureSection{
+        display: inline;
+        position: relative;
+        float: left;
+        padding: 0;
+        margin: 0;
+        bottom: 5rem; 
+        right: 3rem;
+    }
+
+    figcaption.nameText{
+        display: block;
+        width: 300px;
+        font-size: 2.7rem;
+        position: absolute;
+        display: inline-block;
+        top: 1rem;
+        left: 15rem;
+    }
+
+    p.dummyText{
+        display: block;
+        padding: 0;
+    }
+
+    div.iconContainer{
+        display: none;
+    }
+
+
+    section.mainBody{
+        margin: 0;
+    }
+
+
 
     h2.mainHeaderText{
         grid-column: 1/3;
@@ -321,7 +375,9 @@ div.mailIconContainer{
 @media (max-width: 500px) {
 
     
-
+    div.iconContainer{
+        display: flex;
+    }
     
 
 }
