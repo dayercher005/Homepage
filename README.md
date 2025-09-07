@@ -6,8 +6,6 @@
 
 ## Images Courtesy of Pexels:
 
-Image 1: https://www.pexels.com/photo/windsor-suspension-bridge-in-gibraltar-scenic-view-32437893/
+Image 1: https://www.pexels.com/photo/man-in-white-dress-shirt-holding-suit-jacket-1043474/
 
-Image 2: https://www.pexels.com/photo/fresh-loaves-of-bread-in-basket-6966614/
-
-Image 3: https://www.pexels.com/photo/colored-cardboards-forming-a-triangle-6659365/
+Image 2: https://www.pexels.com/photo/shallow-focus-photography-of-man-wearing-eyeglasses-837306/
