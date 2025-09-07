@@ -1,7 +1,7 @@
 # Homepage
 
 
-## Live Preview: https://dayercher005.github.io/Homepage/
+Live Preview: https://dayercher005.github.io/Homepage/
 
 
 ## Images Courtesy of Pexels:
