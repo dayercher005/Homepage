@@ -13,5 +13,5 @@ Image 2: https://www.pexels.com/photo/shallow-focus-photography-of-man-wearing-e
 
 ---
 
-*Part of The Odin Project's [Javascript Course]
+*Part of The Odin Project's [Advanced HTML and CSS Course]
 ([https://www.theodinproject.com/lessons/node-path-advanced-html-and-css-homepage])*
