@@ -12,7 +12,7 @@
     --backgroundColor6: hsl(193, 60%, 60%);
     --boxShadow: hsl(0, 2%, 45%);
     --descriptionColor: hsl(0, 9%, 36%);
-    --wallpaperColor: hsl(217, 29%, 36%);
+    --wallpaperColor: hsl(171, 50%, 46%);
     --wallpaperColor2: hsl(0, 0%, 100%);
     --footerFontSize: 2.5rem;
 }
@@ -205,7 +205,7 @@ p.projectDescription{
 
 /* CSS Styling Code for Footer */
 
-footer{
+footer.footerSection{
     display: flex;
     justify-content: center;
     padding: 2%;
@@ -241,6 +241,9 @@ div.mailIconContainer{
     gap: 3%;
 }
 
+img.footerImage{
+    margin-top: auto;
+}
 
 
 /* CSS Styling for Tablets (viewport within 1000px) */
@@ -263,7 +266,8 @@ div.mailIconContainer{
         display: block;
         height: 400px;
         width: auto;
-        object-fit: contain;
+        object-fit: cover;
+        margin-top: 3rem;
     }
 
     figure.pictureSection{
@@ -365,6 +369,10 @@ div.mailIconContainer{
         align-items: center;
     }
 
+    img.footerImage{
+        margin-bottom: auto;
+    }
+
 }
 
 
@@ -374,11 +382,71 @@ div.mailIconContainer{
 
 @media (max-width: 500px) {
 
-    
+    *{
+        padding: 0;
+    }
+
+    header.Header{
+        position: static;
+        height: auto;
+    }
+
+    figure.pictureSection{
+        margin-left: auto;
+        position: relative;
+        float: none;
+        width: 90%;
+        left: 0%;
+    }
+
+    img.profileImage{
+        height: auto;
+        width: 100%;
+        position: static;
+        object-fit: cover;
+    }
+
+
+    figcaption.nameText{
+        position: absolute;
+        width: 20%;
+        font-size: 3em;
+        top: 63%;
+        left: 15%;
+    }
+
+    div.aboutSection{
+        display: block;
+        position: static;
+        margin: auto;
+        width: 90%;
+        background-color: transparent;
+    }
+
     div.iconContainer{
         display: flex;
+        justify-content: center;
     }
-    
+
+    h2.mainHeaderText{
+        text-align: center;
+        margin-top: 40%;
+    }
+
+    div.projectGridContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    footer.footerSection{
+        display: flex;
+        flex-direction: column;
+    }
+
+    img.footerImage{
+        width: 95%
+    }
 
 }
 
